@@ -20,7 +20,6 @@ const topics = document.querySelector(".topics");
 
 axios.get("https://lambda-times-backend.herokuapp.com/topics").then(res => {
   let top = res.data.topics;
-  console.log(top);
   top.map(el => {
     topics.append(topicsCard(el));
   });
